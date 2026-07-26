@@ -1,7 +1,16 @@
 aid: fig-1
 name: Fig 1
-description: Fig 1 is a company surfaced as a portfolio company of 8vc and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Fig.1 (Figure 1 Beauty) is a direct-to-consumer skincare brand created through
+  8VC's Build program, co-founded with Harvard-trained dermatologist Dr. Courtney
+  Rubin, focused on demystifying and democratizing skincare through transparent,
+  efficacy-driven, in-house formulations sold across a small launch line of
+  cleansers, treatments, and moisturizers. Its public surface is a Shopify-hosted
+  ecommerce storefront at fig-1.co; Fig.1 publishes no first-party developer API,
+  OpenAPI, SDKs, or documentation. This API Evangelist profile records the brand's
+  identity, storefront policy pages, and domain-security posture. The
+  /.well-known/openid-configuration served on the host is Shopify's shared
+  Customer-Account platform OIDC, not a Fig.1 API.
 url: https://raw.githubusercontent.com/api-evangelist/fig-1/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +18,29 @@ x-backed-by:
 - 8vc
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://fig-1.co/cdn/shop/files/logo-orange.svg
 tags:
 - Company
+- Skincare
+- Beauty
+- Ecommerce
+- Direct-to-Consumer
+- Consumer
+- Shopify
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +50,18 @@ maintainers:
 common:
 - type: Website
   url: https://fig-1.co
+- type: SignUp
+  url: https://fig-1.co/account/login
+- type: PrivacyPolicy
+  url: https://fig-1.co/policies/privacy-policy
+- type: TermsOfService
+  url: https://fig-1.co/policies/terms-of-service
+- type: WellKnown
+  url: well-known/fig-1-well-known.yml
+- type: DomainSecurity
+  url: security/fig-1-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

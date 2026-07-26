@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of /.well-known/* on fig-1.co
+host: https://fig-1.co
+note: >-
+  fig-1.co is a Shopify-hosted storefront. The single discovery document served
+  is Shopify's shared Customer-Account platform OIDC (issuer
+  https://shopify.com/authentication/26772635844), not a Fig.1 first-party API.
+  Recorded verbatim as observed; no Fig.1-owned API discovery surface exists.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: fig-1-openid-configuration.json
+  provider: shopify-customer-account
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
