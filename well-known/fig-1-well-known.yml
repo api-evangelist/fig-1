@@ -2,19 +2,23 @@ generated: '2026-07-19'
 method: searched
 source: live probe of /.well-known/* on fig-1.co
 host: https://fig-1.co
-note: >-
-  fig-1.co is a Shopify-hosted storefront. The single discovery document served
-  is Shopify's shared Customer-Account platform OIDC (issuer
-  https://shopify.com/authentication/26772635844), not a Fig.1 first-party API.
-  Recorded verbatim as observed; no Fig.1-owned API discovery surface exists.
-documents:
-- path: /.well-known/openid-configuration
-  status: 200
-  file: fig-1-openid-configuration.json
-  provider: shopify-customer-account
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
+note: fig-1.co is a Shopify-hosted storefront. The single discovery document served is Shopify's shared
+  Customer-Account platform OIDC (issuer https://shopify.com/authentication/26772635844), not a Fig.1
+  first-party API. Recorded verbatim as observed; no Fig.1-owned API discovery surface exists.
+hosts:
+- host: https://fig-1.co
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: fig-1-openid-configuration.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
